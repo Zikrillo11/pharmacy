@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Pharmacy.BLL/Pharmacy.BLL.csproj" />
+  <Project Path="Pharmacy.DAL/Pharmacy.DAL.csproj" />
+  <Project Path="Pharmacy.Domain/Pharmacy.Domain.csproj" />
+  <Project Path="Pharmacy.Shared/Pharmacy.Shared.csproj" />
+  <Project Path="Pharmacy/Pharmacy.csproj" />
+</Solution>
