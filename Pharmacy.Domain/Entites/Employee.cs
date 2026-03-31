@@ -1,9 +1,20 @@
-﻿namespace Pharmacy.Domain.Entites;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
+namespace Pharmacy.Domain.Entites;
+
+[Table("Employees")]
 public class Employee : BaseEntity
 {
-    public string FullName { get; set; }
-    public string Position { get; set; }
-    public string PhoneNumber { get; set; }
+    [Column("full_name")]
+    public required string FullName { get; set; }
+
+    [Column("position")]
+    public required string Position { get; set; }
+
+    [Column("phone_number"), MaxLength(13)]
+    public required string PhoneNumber { get; set; }
+
+    [Column("salary")]
     public decimal Salary { get; set; }
 }

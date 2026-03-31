@@ -1,4 +1,4 @@
-﻿namespace Pharmacy.Domain.Entites;
+﻿namespace Pharmacy.Domain;
 
 public class BaseEntity
 {
