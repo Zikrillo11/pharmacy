@@ -1,10 +1,16 @@
-﻿namespace Pharmacy.Domain.Entites;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
+namespace Pharmacy.Domain.Entites;
+
+[Table("StockHistory")]
 public class StockHistory : BaseEntity
 {
-    public int MedicineId { get; set; }
+    [Column("medicine_id")]
+    public required int MedicineId { get; set; }
     public Medicine Medicine { get; set; }
-    public int QuantityChanged { get; set; }
-    public string ActionType { get; set; }
+    [Column("quantity_changed")]
+    public required int QuantityChanged { get; set; }
+    [Column("action_type")]
+    public required string ActionType { get; set; }
     public DateTime ActionDate { get; set; } = DateTime.Now;
 }
