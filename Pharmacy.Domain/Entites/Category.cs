@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Pharmacy.Domain.Entites;
 
+
+[Table("Categories")]
 public class Category : BaseEntity
 {
-    public string Name { get; set; }
+    [Column("name")]
+    public required string Name { get; set; }
     public ICollection<Medicine> Medicines { get; set; }
 }
