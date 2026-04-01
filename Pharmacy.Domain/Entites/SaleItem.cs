@@ -1,12 +1,21 @@
-﻿namespace Pharmacy.Domain.Entites;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
+namespace Pharmacy.Domain.Entites;
+
+[Table("SaleItems")]
 public class SaleItem : BaseEntity
 {
-    public int SaleId { get; set; }
+    [Column("sale_id")]
+    public required int SaleId { get; set; }
     public Sale Sale { get; set; }
-    public int MedicineId { get; set; }
+
+    [Column("medicine_id")]
+    public required int MedicineId { get; set; }
     public Medicine Medicine { get; set; }
-    public int Quantity { get; set; }
-    public decimal UnitPrice { get; set; }
-    public decimal TotalPrice { get; set; }
+    [Column("quantity")]
+    public required int Quantity { get; set; }
+    [Column("unit_price")]
+    public required decimal UnitPrice { get; set; }
+    [Column("total_price")]
+    public required decimal TotalPrice { get; set; }
 }
